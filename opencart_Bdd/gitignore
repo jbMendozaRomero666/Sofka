@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Java
+*.class
+*.log
+hs_err_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+
+# Reportes y resultados generados
+target/
+serenity-reports/
+allure-results/
+allure-report/

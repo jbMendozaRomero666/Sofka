@@ -1,0 +1,16 @@
+﻿# Conclusiones del ejercicio
+
+## Hallazgos
+
+1. **Compatibilidad con Java 21**: El proyecto ha sido configurado con Java 21 y Maven Compiler Plugin 3.11.0, compatible con OpenJDK 21.0.12.1.
+2. **Disponibilidad de la API**: La API pública https://petstore.swagger.io/v2 responde correctamente con códigos HTTP 200 para todas las operaciones.
+3. **Operaciones CRUD**: POST, GET, PUT y DELETE /user funcionan según lo documentado en Swagger.
+4. **Persistencia temporal**: Los usuarios creados persisten el tiempo necesario para completar el flujo completo de pruebas.
+5. **Validaciones exitosas**: Se validan códigos de estado, username, email, firstName tras actualización.
+
+## Conclusiones
+
+- Karate permite escribir pruebas API concisas y legibles con Gherkin.
+- La configuración actual (Java 21 + Karate 1.4.1) es estable para este ejercicio.
+- El uso de timestamps asegura unicidad y reproducibilidad entre ejecuciones.
+- Todas las operaciones del ciclo solicitado se completan exitosamente.

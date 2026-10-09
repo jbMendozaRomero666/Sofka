@@ -1,0 +1,22 @@
+CONCLUSIONES Y HALLAZGOS
+Proyecto: Prueba de carga del servicio de login con JMeter
+Fecha: 08/10/2026
+
+1. En el dashboard adjunto, la latencia media visible es 278 ms y el P90 medio es 288 ms, ambos por debajo del umbral de 1,5 segundos. El panel de errores muestra 0 req/s durante el intervalo representado.
+
+2. El panel de TPS presenta una media de 42,1 req/s y un máximo de 108 req/s, valores superiores al objetivo de 20 TPS. Sin embargo, la serie tiene caídas repetidas hasta cero y el último valor visible es 0 req/s; por eso no se puede asegurar que el objetivo se haya mantenido de forma continua durante los 10 minutos.
+
+3. La fila de resumen del endpoint muestra 247 peticiones, 49,4 req/s, latencia media de 282 ms, máximo de 611 ms y P90 de 273 ms. Esta fila puntual no demuestra por sí sola el volumen total de una ejecución completa de 10 minutos.
+
+4. En el ejercicio complementario del PDF, el resumen reporta 276.650 solicitudes, 173,77 req/s y una tasa de error de 2,44%, inferior al límite de 3%. El P90 es 1,28 s, pero el P95 es 1,57 s y el máximo 29,93 s; se deben investigar las solicitudes lentas.
+
+5. El gráfico de VUs frente a peticiones por segundo muestra una caída pronunciada del throughput mientras el número de usuarios virtuales permanece alto, seguida de recuperación. Mantener VUs no garantiza un throughput constante.
+
+6. No hubo una persona asignada al monitoreo del ambiente. Por tanto, no se puede correlacionar el comportamiento con CPU, memoria, disco, red, base de datos o servicios dependientes, ni determinar causa raíz de las caídas.
+
+7. La prueba se ejecuta en un ambiente de pruebas y tiene una duración limitada a 10 minutos. Los resultados no deben extrapolarse directamente a producción ni a periodos prolongados.
+
+Recomendaciones prioritarias:
+- Investigar las caídas a cero y validar filtros, ventanas y agregación de las métricas.
+- Asignar monitoreo de infraestructura o automatizar la recolección de métricas durante la prueba.
+- Repetir la prueba con configuración documentada y comparar los resultados bajo condiciones equivalentes.

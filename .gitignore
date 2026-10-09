@@ -1,0 +1,84 @@
+# ==============================
+# Gradle
+# ==============================
+.gradle/
+**/.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Conservar los archivos fuente aunque exista una carpeta build
+!**/src/**/build.gradle
+
+# ==============================
+# Maven
+# ==============================
+target/
+**/target/
+
+# ==============================
+# Java / Kotlin
+# ==============================
+*.class
+*.jar
+*.war
+*.ear
+.kotlin/
+
+# ==============================
+# IDEs
+# ==============================
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.factorypath
+.apt_generated/
+
+
+# ==============================
+# Logs y temporales
+# ==============================
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+hs_err_pid*
+replay_pid*
+
+# ==============================
+# Variables y secretos
+# ==============================
+.env
+.env.*
+!.env.example
+secrets/
+*.jks
+*.keystore
+credentials.json
+
+# ==============================
+# Reportes automáticos de pruebas
+# ==============================
+# Serenity / Cucumber
+**/target/site/serenity/
+**/target/cucumber-reports/
+**/target/surefire-reports/
+**/target/failsafe-reports/
+
+# Karate
+**/target/karate-reports/
+
+# ==============================
+# JMeter
+# ==============================
+# Archivos de resultados generados durante ejecuciones
+*.jtl
+
+# Archivos de respaldo
+*~
